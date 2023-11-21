@@ -1,0 +1,39 @@
+#about-page {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  @include flex-row-center;
+  background-color: $--clr-light-secondary;
+  @include phone {
+    height: auto;
+  }
+  @include small-tablet {
+    height: auto;
+  }
+  @include tablet {
+    height: auto;
+  }
+
+  .about-page__left {
+    @include flex-col-center;
+    // background-color: lightblue;
+  }
+
+  .about-page__right {
+    @include flex-row-center;
+
+    .about-page__image {
+      background: url("../../assets/photo.jpg") no-repeat center/cover;
+      box-shadow:
+        rgba(245, 138, 7, 0.4) 5px 5px,
+        rgba(245, 138, 7, 0.3) 10px 10px,
+        rgba(245, 138, 7, 0.2) 15px 15px,
+        rgba(245, 138, 7, 0.1) 20px 20px,
+        rgba(245, 138, 7, 0.05) 25px 25px;
+    }
+
+    .about-page__image-border {
+      transform: translateX(2rem);
+    }
+  }
+}

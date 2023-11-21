@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./styles/dist/output.css" />
+    <title>Miroslav Mihok - Portfolio</title>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@v0.158.0/build/three.module.js",
+          "three/addons/": "https://unpkg.com/three@v0.158.0/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- START of navbar -->
+    <nav class="fixed top-0 z-50 w-full">
+      <div
+        class="navbar_column flex min-h-[55px] w-full flex-col items-center justify-center"
+      >
+        <div class="navbar__container h-full w-[80%] max-md:w-full max-md:px-4">
+          <div class="logo-section">
+            <button class="homepage-btn">
+              <span class="navbar-logo m-0"
+                >&lt;<span class="logo-orange">MM</span>/&gt;</span
+              >
+            </button>
+          </div>
+          <div class="menu-section h-full max-md:hidden">
+            <ul class="h-full">
+              <li class="relative h-full">
+                <a href="#" class="menuBtn" name="Home">Home</a>
+              </li>
+              <li class="relative h-full">
+                <a href="#" class="menuBtn" name="About">About</a>
+              </li>
+              <li class="relative h-full">
+                <a href="#" class="menuBtn" name="Skills">Skills</a>
+              </li>
+              <li class="relative h-full">
+                <a href="#" class="menuBtn" name="Projects">Projects</a>
+              </li>
+              <li class="relative h-full">
+                <a href="#" class="menuBtn" name="Contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="phone-menu-btn hidden max-md:flex">
+            <button>
+              <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+          </div>
+        </div>
+        <div
+          class="phone-menu-section hidden w-full max-md:flex max-md:justify-center"
+        >
+          <ul class="w-full gap-[0.5rem]">
+            <li class="relative w-full text-center">
+              <a href="#" class="menuBtn" name="Home">Home</a>
+            </li>
+            <li class="relative w-full text-center">
+              <a href="#" class="menuBtn" name="About">About</a>
+            </li>
+            <li class="relative w-full text-center">
+              <a href="#" class="menuBtn" name="Skills">Skills</a>
+            </li>
+            <li class="relative w-full text-center">
+              <a href="#" class="menuBtn" name="Projects">Projects</a>
+            </li>
+            <li class="relative w-full text-center">
+              <a href="#" class="menuBtn" name="Contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- END of navbar -->
+    <!-- START of hero-section -->
+    <div id="home-page" class="relative z-20 flex justify-start">
+      <div
+        class="home-page_model_container absolute left-0 top-0 z-0 flex h-full w-full max-md:hidden"
+      >
+        <div class="home-page_model_empty h-full w-[50%]"></div>
+        <canvas id="home-page_model" class="h-full" style="width: 50%"></canvas>
+      </div>
+      <div
+        class="home-page__gradient absolute left-0 top-0 z-10 h-full w-full max-md:hidden"
+      ></div>
+      <div
+        class="home-page__container z-30 h-full w-[50%] py-[8rem] max-md:w-full"
+      >
+        <div class="home-page__text w-[90%] pl-[3rem] max-md:pl-0">
+          <span>&lt;h1&gt;</span>
+          <h1>I'm <span id="text_name">Miroslav Mihok</span></h1>
+          <h1>Front End Developer</h1>
+          <span>&lt;/h1&gt;</span>
+          <br />
+          <span>&lt;p&gt;</span>
+          <p>
+            "Hello world! I'm a passionate Front End Developer with a strong
+            enthusiasm for crafting exceptional web experiences.
+          </p>
+          <span>&lt;/p&gt;</span>
+          <div class="home-page__buttons mt-4">
+            <button>
+              <a
+                href="https://drive.google.com/file/d/1eBwd0DjuIEvLm3-fhnOHQFuO108GD1ZQ/view?usp=sharing"
+                target="_blank"
+                ><i class="fa-solid fa-cloud-arrow-down mr-2"></i>Resume</a
+              >
+            </button>
+            <button class="ml-4">
+              <a href="https://wa.me/00436609034009" target="_blank"
+                ><i class="fa-brands fa-whatsapp mr-2"></i>Let's chat</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END of hero-section -->
+    <!-- START of about-section -->
+    <div id="about-page">
+      <div
+        class="about-page__container h-full w-[80%] py-[8rem] max-lg:py-[3.5rem]"
+      >
+        <h2 class="text-center">About me</h2>
+        <div class="grid grid-cols-2 max-xl:grid-cols-1 max-xl:gap-6">
+          <div
+            class="about-page__left col-span-1 px-36 max-xl:col-span-1 max-xl:px-0"
+          >
+            <p class="w-full whitespace-normal break-words text-justify">
+              Hi, I'm Miroslav Mihok, a 29-year-old programmer. Originally from
+              Slovakia but moved to Austria when I was 11. It was during my time
+              at HAK in Neusiedl am See that I began my journey into
+              programming, focusing on languages like HTML, CSS, and JavaScript.
+              <br />
+              <br />
+              Today, I'm a dedicated programmer who has reignited my passion for
+              coding. I've explored technologies such as React, Angular, and
+              TypeScript, continuously creating and learning. I enjoy solving
+              problems and find great satisfaction in the moment when a complex
+              puzzle is finally pieced together.
+              <br />
+              <br />
+              I believe in following your passion, and for me, that passion is
+              coding. Here's to pursuing dreams, writing code, and shaping the
+              digital world, one project at a time.
+            </p>
+          </div>
+          <div class="about-page__right relative col-span-1 max-md:col-span-1">
+            <div
+              class="about-page__image z-10 aspect-square w-[65%] rounded-2xl border-none"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END of about-section -->
+    <!-- START of skills-section -->
+    <div id="skills-page">
+      <div
+        class="skills-page__container h-full w-[80%] py-[8rem] max-lg:py-[3.5rem]"
+      >
+        <h2 class="text-center">Skills</h2>
+        <div class="skills_container h-fit w-full py-[2rem] max-xl:flex-wrap">
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg"
+              alt="html5"
+            />
+          </div>
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg"
+              alt="css3"
+            />
+          </div>
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+              alt="sass"
+            />
+          </div>
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg"
+              alt="bootstrap"
+            />
+          </div>
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg"
+              alt="tailwind"
+            />
+          </div>
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+              alt="javascript"
+            />
+          </div>
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+              alt="react"
+            />
+          </div>
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://angular.io/assets/images/logos/angular/angular.svg"
+              alt="angular"
+            />
+          </div>
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+              alt="typescript"
+            />
+          </div>
+        </div>
+        <div
+          class="skills-cards__container grid h-auto w-[80%] grid-cols-3 justify-center gap-24 max-xl:w-full max-xl:gap-6 max-sm:grid-cols-1"
+        >
+          <div class="skills-card py-4">
+            <h3>Frontend</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>SASS</li>
+              <li>Bootstrap</li>
+              <li>Tailwind</li>
+              <li>Javascript</li>
+              <li>React JS</li>
+              <li>Angular</li>
+              <li>Typescript</li>
+            </ul>
+          </div>
+          <div class="skills-card py-4">
+            <h3>Libraries</h3>
+            <ul>
+              <li>GSAP</li>
+              <li>Lenis</li>
+              <li>Three.js</li>
+            </ul>
+          </div>
+          <div class="skills-card py-4">
+            <h3>Tools</h3>
+            <ul>
+              <li>Visual Studio Code</li>
+              <li>Git</li>
+              <li>Github</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe After Effects</li>
+              <li>Adobe Premiere</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END of skills-section -->
+    <!-- START of projects-section -->
+    <div id="projects-page">
+      <div
+        class="projects-page__container h-full w-[80%] py-[8rem] max-lg:py-[3.5rem]"
+      >
+        <h2>Projects</h2>
+        <div class="projects__container w-[80%] max-lg:w-full">
+          <div
+            class="project-item m-6 grid w-full grid-cols-2 gap-6 rounded-3xl border border-none p-6 max-xl:grid-cols-1"
+          >
+            <div class="project-item__left col-span-1">
+              <div
+                class="project-item-image__container h-full overflow-hidden rounded-2xl border border-none"
+              >
+                <img
+                  src="./assets/projects/nextwipe.png"
+                  alt="nextwipeweb"
+                  class="aspect-[16/9] object-cover object-left"
+                />
+              </div>
+            </div>
+            <div
+              class="project-item__right col-span-1 flex flex-col items-center justify-between text-center"
+            >
+              <h4>Next Wipe <span>(November 2023)</span></h4>
+              <p class="pb-4 text-center">
+                NextWipe is an interactive tool designed for Rust game
+                enthusiasts to easily discover servers based on specific
+                criteria such as server type, wipe schedule, and group size. The
+                platform provides essential server information, including a
+                direct connect feature through a Steam link. Users can
+                efficiently filter and explore servers, and detailed information
+                can be accessed with a simple click on the server container.
+                <br />
+                <br />
+                <span class="text-sm italic text-gray-500"
+                  >Note: Due to conflicts of interest, I am restricted from
+                  publicly sharing this project. To access the website, kindly
+                  use the password "B"<:0)/3@K84EW)jg.eo(wfz"</span
+                >
+              </p>
+              <div class="project-item__buttons pb-4">
+                <button>Mongo DB</button>
+                <button>Node JS</button>
+                <button>Express</button>
+                <button>React</button>
+                <button>Tailwind CSS</button>
+              </div>
+              <div
+                class="project-item__links flex w-full items-center justify-evenly"
+              >
+                <button>
+                  <a
+                    href="https://github.com/miroslavmihok/React-Project-13-NextWipe"
+                    target="_blank"
+                    >Code <i class="fa-brands fa-github"></i
+                  ></a>
+                </button>
+                <button>
+                  <a
+                    href="https://react-project-13.netlify.app/"
+                    target="_blank"
+                    >Live Demo
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-item m-6 grid w-full grid-cols-2 gap-6 rounded-3xl border border-none p-6 max-xl:grid-cols-1"
+          >
+            <div class="project-item__left col-span-1 text-center">
+              <h4>CodeFactory Alumni <span>(October 2023)</span></h4>
+              <p class="pb-4 text-center">
+                The CodeFactory Alumni project marks the conclusion of a
+                CodeFactory course, resulting in a comprehensive website
+                showcasing the institution's mission, alumni profiles, success
+                stories, upcoming events, and job opportunities. It successfully
+                integrates specific requirements, providing a user-friendly
+                interface to explore the diverse aspects of CodeFactory,
+                including its impact on graduates' careers.
+              </p>
+              <div class="project-item__buttons pb-4">
+                <button>Angular</button>
+                <button>Typescript</button>
+                <button>HTML</button>
+                <button>SASS</button>
+              </div>
+              <div
+                class="project-item__links flex w-full items-center justify-evenly"
+              >
+                <button>
+                  <a
+                    href="https://github.com/miroslavmihok/Group-7-FinalProject"
+                    target="_blank"
+                    >Code <i class="fa-brands fa-github"></i
+                  ></a>
+                </button>
+                <button>
+                  <a
+                    href="https://snazzy-ganache-f3acd0.netlify.app/"
+                    target="_blank"
+                    >Live Demo
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+            <div class="project-item__right col-span-1">
+              <div
+                class="project-item-image__container h-full overflow-hidden rounded-2xl border border-none"
+              >
+                <img
+                  src="./assets/projects/alumni.png"
+                  alt="alumni web"
+                  class="aspect-[16/9] object-cover object-left"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-item m-6 grid w-full grid-cols-2 gap-6 rounded-3xl border border-none p-6 max-xl:grid-cols-1"
+          >
+            <div class="project-item__left col-span-1">
+              <div
+                class="project-item-image__container h-full overflow-hidden rounded-2xl border border-none"
+              >
+                <img
+                  src="./assets/projects/burgershop.png"
+                  alt="burgershop"
+                  class="aspect-[16/9] object-cover object-left"
+                />
+              </div>
+            </div>
+            <div
+              class="project-item__right col-span-1 flex flex-col items-center justify-between text-center"
+            >
+              <h4>The Bear (Burger Restaurant) <span>(October 2023)</span></h4>
+              <p class="pb-4 text-center">
+                A personal project aimed at experimenting with animations and
+                user interactivity, the Burger Restaurant website employs GSAP
+                and Lenis library. Visitors can engage with the site by
+                selecting products, triggering instant image previews on hover,
+                and manipulating the shopping cart. The dynamic cart
+                functionality allows users to add, remove, and adjust
+                quantities, providing an interactive experience.
+              </p>
+              <div class="project-item__buttons pb-4">
+                <button>HTML</button>
+                <button>SASS</button>
+                <button>Tailwind CSS</button>
+                <button>Javascript</button>
+                <button>GSAP</button>
+              </div>
+              <div
+                class="project-item__links flex w-full items-center justify-evenly"
+              >
+                <button>
+                  <a
+                    href="https://github.com/miroslavmihok/JS-Burger-Shop"
+                    target="_blank"
+                    >Code <i class="fa-brands fa-github"></i
+                  ></a>
+                </button>
+                <button>
+                  <a
+                    href="https://peppy-cendol-de46e9.netlify.app/"
+                    target="_blank"
+                    >Live Demo
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-item m-6 grid w-full grid-cols-2 gap-6 rounded-3xl border border-none p-6 max-xl:grid-cols-1"
+          >
+            <div class="project-item__left col-span-1 text-center">
+              <h4>Italian Restaurant <span>(September 2023)</span></h4>
+              <p class="pb-4 text-center">
+                The Italian Restaurant project, part of the CodeFactory course,
+                narrates the restaurant's story, showcases the menu, and
+                empowers customers to add items dynamically to their cart. The
+                cart displays real-time updates on quantity and price with an
+                option to clear the cart.
+              </p>
+              <div class="project-item__buttons pb-4">
+                <button>Angular</button>
+                <button>Typescript</button>
+                <button>HTML</button>
+                <button>SASS</button>
+                <button>Tailwind CSS</button>
+                <button>Bootstrap</button>
+              </div>
+              <div
+                class="project-item__links flex w-full items-center justify-evenly"
+              >
+                <button>
+                  <a
+                    href="https://github.com/miroslavmihok/FE20-CR3-MiroslavMihok"
+                    target="_blank"
+                    >Code <i class="fa-brands fa-github"></i
+                  ></a>
+                </button>
+                <button>
+                  <a
+                    href="https://dancing-profiterole-8ec14d.netlify.app/"
+                    target="_blank"
+                    >Live Demo
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+            <div class="project-item__right col-span-1">
+              <div
+                class="project-item-image__container h-full overflow-hidden rounded-2xl border border-none"
+              >
+                <img
+                  src="./assets/projects/restaurant.png"
+                  alt="italian restaurant web"
+                  class="aspect-[16/9] object-cover object-left"
+                />
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-item m-6 grid w-full grid-cols-2 gap-6 rounded-3xl border border-none p-6 max-xl:grid-cols-1"
+          >
+            <div class="project-item__left col-span-1">
+              <div
+                class="project-item-image__container h-full overflow-hidden rounded-2xl border border-none"
+              >
+                <img
+                  src="./assets/projects/tesla.png"
+                  alt="burgershop"
+                  class="aspect-[16/9] object-cover object-left"
+                />
+              </div>
+            </div>
+            <div
+              class="project-item__right col-span-1 flex flex-col items-center justify-between text-center"
+            >
+              <h4>Tesla Clone <span>(September 2023)</span></h4>
+              <p class="pb-4 text-center">
+                The first project of the CodeFactory course, the Tesla Website
+                focuses on creating an informative platform for a car
+                manufacturer. The site features a container for multiple car
+                models, enhanced by a dynamic background that changes
+                periodically. The website provides detailed information about
+                each car model to deliver an engaging user experience.
+              </p>
+              <div class="project-item__buttons pb-4">
+                <button>HTML</button>
+                <button>SASS</button>
+                <button>Javascript</button>
+              </div>
+              <div
+                class="project-item__links flex w-full items-center justify-evenly"
+              >
+                <button>
+                  <a
+                    href="https://github.com/miroslavmihok/JS-Day-4-Tesla-Website/tree/master"
+                    target="_blank"
+                    >Code <i class="fa-brands fa-github"></i
+                  ></a>
+                </button>
+                <button>
+                  <a
+                    href="https://stupendous-kashata-fb0ea2.netlify.app/#"
+                    target="_blank"
+                    >Live Demo
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button id="more-projects_button">
+            <a
+              href="https://github.com/miroslavmihok?tab=repositories"
+              target="_blank"
+              >More Projects <i class="fa-brands fa-github"></i
+            ></a>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- END of projects-section -->
+    <!-- START of contact-section -->
+    <div id="contact-page">
+      <div class="contact-page__container h-full w-[80%] py-[8rem]">
+        <h2 class="text-center">Get in Touch</h2>
+        <div class="contact-info__container w-[60%] gap-[1rem] max-sm:w-full">
+          <div class="contact-info">
+            <div class="contact-info__left">
+              <div
+                class="contact-info__button h-fit w-fit rounded-full border border-none"
+              >
+                <i
+                  class="fa-brands fa-whatsapp flex h-16 w-16 items-center justify-center text-2xl"
+                ></i>
+              </div>
+            </div>
+            <div class="contact-info__right ml-4">
+              <h4 class="m-0">Phone</h4>
+              <p>+436609034009</p>
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="contact-info__left h-full">
+              <div
+                class="contact-info__button h-fit w-fit rounded-full border border-none"
+              >
+                <i
+                  class="fa-regular fa-envelope flex h-16 w-16 items-center justify-center text-2xl"
+                ></i>
+              </div>
+            </div>
+            <div class="contact-info__right ml-4">
+              <h4 class="m-0">Email</h4>
+              <p>m.mihok1@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END of contact-section -->
+    <!-- START of footer-section -->
+    <footer class="py-4">
+      <div class="footer__container">
+        <span>&copy; Copyright Miroslav Mihok. All Rights Reserved</span>
+        <div class="socials__container">
+          <a href="https://github.com/miroslavmihok" target="_blank"
+            ><i class="fa-brands fa-github text-2xl"></i
+          ></a>
+          <a
+            href="https://www.linkedin.com/in/miroslav-mihok-67aa80162/"
+            target="_blank"
+            ><i class="fa-brands fa-linkedin ml-4 text-2xl"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <!-- END of footer-section -->
+    <!-- Javascript file and libraries -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script type="module" src="./js/model.js"></script>
+  </body>
+</html>

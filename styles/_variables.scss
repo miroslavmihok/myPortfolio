@@ -1,0 +1,63 @@
+// media variables
+
+$phone-width: 640px;
+$small_tablet-width: 768px;
+$large_tablet-width: 1024px;
+$small_desktop-width: 1280px;
+$large_desktop-width: 1536px;
+
+// FONTS
+
+$--font-family1: "Audiowide", sans-serif;
+$--font-family2: "Galada", cursive;
+$--font-family3: "Lato", sans-serif;
+$--font-family4: "Montserrat", sans-serif;
+$--font-family5: "Poppins", sans-serif;
+$--font-family6: "Roboto", sans-serif;
+$--font-family7: "Italianno", cursive;
+
+// FONT SIZE
+
+$--h1: 5rem;
+$--h2: calc($--h1 / 1.618);
+$--h3: calc($--h2 / 1.618);
+$--h4: calc($--h3 / 1.618);
+$--p1: 1.25rem;
+$--p2: calc($--p1 / 1.214);
+$--p3: calc($--p2 / 1.214);
+
+$--tablet-h1: 3.5rem;
+$--tablet-h2: calc($--tablet-h1 / 1.618);
+$--tablet-h3: calc($--tablet-h2 / 1.618);
+$--tablet-h4: calc($--tablet-h3 / 1.618);
+$--tablet-p1: 1.1rem;
+$--tablet-p2: calc($--tablet-p1 / 1.214);
+$--tablet-p3: calc($--tablet-p2 / 1.214);
+
+$--phone-h1: 2.5rem;
+$--phone-h2: calc($--phone-h1 / 1.618);
+$--phone-h3: calc($--phone-h2 / 1.618);
+$--phone-h4: calc($--phone-h3 / 1.618);
+$--phone-p1: 1rem;
+$--phone-p2: calc($--phone-p1 / 1.214);
+$--phone-p3: calc($--phone-p2 / 1.214);
+
+// COLORS
+
+$--clr-light-primary: #f7f3f3;
+$--clr-light-secondary: #efe7e7;
+$--clr-medium-primary: #858585;
+$--clr-dark-primary: #262626;
+$--clr-button-green: #6cae75;
+$--clr-button-light-green: #89be90;
+$--clr-button-blue: #3c91e6;
+$--clr-button-light-blue: #6fadec;
+$--clr-orange: #f58a07;
+
+// SHADOW
+$--shadow-card:
+  10px 10px 20px #e1dddd,
+  -10px -10px 20px #ffffff;
+$--shadow-skills:
+  8px 8px 22px #dcd8d8,
+  -8px -8px 22px #ffffff;

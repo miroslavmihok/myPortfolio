@@ -1,0 +1,68 @@
+nav {
+  max-width: 100%;
+  @include flex-row-center;
+  background: linear-gradient(
+    to right,
+    $--clr-light-primary 50%,
+    transparent 1000%
+  );
+  @include phone {
+    background: linear-gradient(
+      to bottom,
+      $--clr-light-primary 50%,
+      transparent 1000%
+    );
+  }
+
+  .navbar_column {
+    .navbar__container {
+      @include flex-row;
+      justify-content: space-between;
+
+      .navbar-logo {
+        color: $--clr-dark-primary;
+        font-weight: 600;
+        font-size: 2rem;
+        @include phone {
+          font-size: 1.6rem;
+        }
+        @include small-tablet {
+          font-size: 2rem;
+        }
+        @include tablet {
+          font-size: 2rem;
+        }
+
+        span {
+          color: $--clr-orange;
+        }
+      }
+
+      .menu-section {
+        ul {
+          @include flex-row;
+          // font-weight: 600;
+          font-size: 1.2rem;
+
+          a {
+            transition: all 0.3s ease;
+            padding: 1rem 1.5rem;
+            &:hover {
+              background-color: $--clr-light-secondary;
+              box-shadow: 0px 4px 0px 0px $--clr-dark-primary;
+            }
+          }
+        }
+      }
+    }
+
+    .phone-menu-section {
+      overflow: hidden;
+      transition: max-height ease 0.8s;
+
+      ul {
+        @include flex-col-center;
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "prettier-plugin-tailwindcss": "^0.5.7",
+    "tailwindcss": "^3.3.5"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "three": "^0.158.0"
+  }
+}

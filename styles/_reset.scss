@@ -1,0 +1,136 @@
+@import "variables";
+@import "mixins";
+
+// GLOBAL STYLING
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  position: relative;
+}
+
+body {
+  max-width: 100%;
+  // overflow-y: hidden;
+}
+
+body:not(i) {
+  font-family: $--font-family6;
+  // font-family: 'Roboto', sans-serif;
+  color: $--clr-dark-primary;
+}
+
+ul {
+  list-style: none;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1 {
+  font-size: $--h1;
+  @include heading();
+  @include phone {
+    font-size: $--phone-h1;
+  }
+  @include small-tablet {
+    font-size: $--tablet-h1;
+  }
+  @include tablet {
+    font-size: $--tablet-h1;
+  }
+}
+
+h2 {
+  font-size: $--h2;
+  @include heading();
+  @include phone {
+    font-size: $--phone-h2;
+  }
+
+  @include small-tablet {
+    font-size: $--tablet-h2;
+  }
+  @include tablet {
+    font-size: $--tablet-h2;
+  }
+}
+
+h3 {
+  font-size: $--h3;
+  @include heading();
+  @include phone {
+    font-size: $--phone-h3;
+  }
+
+  @include small-tablet {
+    font-size: $--tablet-h3;
+  }
+  @include tablet {
+    font-size: $--tablet-h3;
+  }
+}
+
+h4 {
+  font-size: $--h4;
+  @include heading();
+  @include phone {
+    font-size: $--h4;
+  }
+
+  @include small-tablet {
+    font-size: $--h4;
+  }
+  @include tablet {
+    font-size: $--h4;
+  }
+}
+
+p {
+  font-size: $--p1;
+  @include phone {
+    font-size: $--phone-p1;
+  }
+
+  @include small-tablet {
+    font-size: $--tablet-p1;
+  }
+  @include tablet {
+    font-size: $--tablet-p1;
+  }
+}
+
+a,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: black;
+}
+
+img {
+  display: block;
+}
+
+button {
+  outline: none;
+}
