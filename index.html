@@ -22,6 +22,7 @@
     </script>
   </head>
   <body>
+    <!-- npx tailwindcss -i ./styles.css -o ./styles/dist/output.css --watch -->
     <!-- START of navbar -->
     <nav class="fixed top-0 z-50 w-full">
       <div
@@ -101,13 +102,13 @@
         <div class="home-page__text w-[90%] pl-[3rem] max-md:pl-0">
           <span>&lt;h1&gt;</span>
           <h1>I'm <span id="text_name">Miroslav Mihok</span></h1>
-          <h1>Front End Developer</h1>
+          <h1>Full Stack Developer</h1>
           <span>&lt;/h1&gt;</span>
           <br />
           <span>&lt;p&gt;</span>
           <p>
-            "Hello world! I'm a passionate Front End Developer with a strong
-            enthusiasm for crafting exceptional web experiences.
+            "Hello world! I'm a passionate Full Stack Developer with a strong
+            enthusiasm <br />for crafting exceptional web experiences.
           </p>
           <span>&lt;/p&gt;</span>
           <div class="home-page__buttons mt-4">
@@ -115,11 +116,15 @@
               <a
                 href="https://drive.google.com/file/d/1eBwd0DjuIEvLm3-fhnOHQFuO108GD1ZQ/view?usp=sharing"
                 target="_blank"
+                referrerpolicy="no-referrer"
                 ><i class="fa-solid fa-cloud-arrow-down mr-2"></i>Resume</a
               >
             </button>
             <button class="ml-4">
-              <a href="https://wa.me/00436609034009" target="_blank"
+              <a
+                href="https://wa.me/00436609034009"
+                target="_blank"
+                referrerpolicy="no-referrer"
                 ><i class="fa-brands fa-whatsapp mr-2"></i>Let's chat</a
               >
             </button>
@@ -172,7 +177,9 @@
         class="skills-page__container h-full w-[80%] py-[8rem] max-lg:py-[3.5rem]"
       >
         <h2 class="text-center">Skills</h2>
-        <div class="skills_container h-fit w-full py-[2rem] max-xl:flex-wrap">
+        <div
+          class="skills_container h-fit w-full gap-y-4 py-[2rem] max-xl:flex-wrap"
+        >
           <div
             class="skill_item h-fit w-fit rounded-full border border-none p-4"
           >
@@ -233,22 +240,45 @@
             class="skill_item h-fit w-fit rounded-full border border-none p-4"
           >
             <img
-              src="https://angular.io/assets/images/logos/angular/angular.svg"
-              alt="angular"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
+              alt="typescript"
             />
           </div>
           <div
             class="skill_item h-fit w-fit rounded-full border border-none p-4"
           >
             <img
-              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-              alt="typescript"
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+              alt="mongodb"
+            />
+          </div>
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+              alt="nodejs"
+            />
+          </div>
+          <div
+            class="skill_item h-fit w-fit rounded-full border border-none p-4"
+          >
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
+              alt="express"
             />
           </div>
         </div>
         <div
-          class="skills-cards__container grid h-auto w-[80%] grid-cols-3 justify-center gap-24 max-xl:w-full max-xl:gap-6 max-sm:grid-cols-1"
+          class="skills-cards__container grid h-auto w-[80%] grid-cols-4 justify-center gap-24 max-xl:w-full max-xl:grid-cols-2 max-xl:gap-6 max-sm:grid-cols-1"
         >
+          <div class="skills-card py-4">
+            <h3>Backend</h3>
+            <ul>
+              <li>Node.js</li>
+              <li>Express.js</li>
+            </ul>
+          </div>
           <div class="skills-card py-4">
             <h3>Frontend</h3>
             <ul>
@@ -259,7 +289,6 @@
               <li>Tailwind</li>
               <li>Javascript</li>
               <li>React JS</li>
-              <li>Angular</li>
               <li>Typescript</li>
             </ul>
           </div>
@@ -269,6 +298,11 @@
               <li>GSAP</li>
               <li>Lenis</li>
               <li>Three.js</li>
+              <li>Reast-Email</li>
+              <li>Resend</li>
+              <li>Zod</li>
+              <li>Bcrypt</li>
+              <li>Jwt</li>
             </ul>
           </div>
           <div class="skills-card py-4">
@@ -277,6 +311,7 @@
               <li>Visual Studio Code</li>
               <li>Git</li>
               <li>Github</li>
+              <li>Postman</li>
               <li>Adobe Photoshop</li>
               <li>Adobe After Effects</li>
               <li>Adobe Premiere</li>
@@ -298,12 +333,150 @@
           >
             <div class="project-item__left col-span-1">
               <div
-                class="project-item-image__container h-full overflow-hidden rounded-2xl border border-none"
+                class="project-item-image__container aspect-[16/9] w-full overflow-hidden rounded-2xl border border-none"
+              >
+                <img
+                  src="./assets/projects/boosting-service.png"
+                  alt="boostingserviceweb"
+                  class="aspect-[16/9] object-fill object-left"
+                />
+              </div>
+            </div>
+            <div
+              class="project-item__right col-span-1 flex flex-col items-center justify-between text-center"
+            >
+              <h4>Boosting Service <span>(February - April 2024)</span></h4>
+              <p class="pb-4 text-center">
+                Boosting Service is a platform for gamers seeking personalized
+                boosting services, this project showcases my ability to create a
+                user-friendly interface that allows visitors to easily navigate
+                and customize their experience. Users can select their desired
+                game, filter products, add items to their cart, and securely
+                complete transactions via Stripe or PayPal. <br /><br />Boosting
+                Service offers gamers to register as Booster or Coach through a
+                "work with us" form. <br /><br />Behind the scenes, a fully
+                functional authentication system and Admin Panel provide
+                seamless management of Products, Games, Users, and Orders. Each
+                user has their profile, allowing them to manage personal
+                information, view order history, and complete pending tasks.
+              </p>
+              <div class="flex flex-col gap-y-4 w-full pb-4">
+                    <div class="flex flex-col items-start justify-center">
+                      <span class="font-semibold">Admin:</span>
+                      <span>admin@email.com / Admin123!</span>
+                    </div>
+                    <div class="flex flex-col items-start justify-center">
+                      <span class="font-semibold">User:</span>
+                      <span>john@email.com / User123!</span>
+                    </div>
+                    <div class="flex flex-col items-start justify-center">
+                      <span class="font-semibold">Paypal Sandbox Account:</span>
+                      <span class="break-all text-left">sb-y3w7c30028915@personal.example.com / F$Ia.U8#</span>
+                    </div>
+                    <div class="flex flex-col items-start justify-center">
+                      <span class="font-semibold">Stripe Test Card:</span>
+                      <span>4242 4242 4242 4242 / 2/28 / 424</span>
+                    </div>
+                </table>
+              </div>
+              <div class="project-item__buttons pb-4">
+                <button>Mongo DB</button>
+                <button>Node JS</button>
+                <button>Express</button>
+                <button>React</button>
+                <button>React-Email</button>
+                <button>Resend</button>
+                <button>Tailwind CSS</button>
+              </div>
+              <div
+                class="project-item__links flex w-full items-center justify-evenly"
+              >
+                <button>
+                  <a
+                    href="https://github.com/miroslavmihok/Dawndelvers"
+                    target="_blank"
+                    referrerpolicy="no-referrer"
+                    >Code <i class="fa-brands fa-github"></i
+                  ></a>
+                </button>
+                <button>
+                  <a
+                    href="https://boosting-service.netlify.app/"
+                    target="_blank"
+                    referrerpolicy="no-referrer"
+                    >Live Demo
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-item m-6 grid w-full grid-cols-2 gap-6 rounded-3xl border border-none p-6 max-xl:grid-cols-1"
+          >
+            <div class="project-item__left col-span-1">
+              <div
+                class="project-item-image__container aspect-[16/9] w-full overflow-hidden rounded-2xl border border-none"
+              >
+                <img
+                  src="./assets/projects/einfach-entspannen.png"
+                  alt="einfachentspannenweb"
+                  class="aspect-[16/9] object-fill object-left"
+                />
+              </div>
+            </div>
+            <div
+              class="project-item__right col-span-1 flex flex-col items-center justify-between text-center"
+            >
+              <h4>Einfach Entspannen <span>(December 2023)</span></h4>
+              <p class="pb-4 text-center">
+                Presentational website for my mom's service company, covering
+                massage therapy, hairdressing, nail studio, and foot care.
+                <br />The site acts as a clean digital portfolio, letting
+                potential clients browse services with detailed descriptions.
+                It's easy for customers to find contact info, including the
+                phone number. <br />Plus, I connected Instagram, so the site
+                displays the latest posts, giving a sneak peek into the
+                company's skills and style.
+              </p>
+              <div class="project-item__buttons pb-4">
+                <button>React</button>
+                <button>Tailwind CSS</button>
+              </div>
+              <div
+                class="project-item__links flex w-full items-center justify-evenly"
+              >
+                <button>
+                  <a
+                    href="https://github.com/miroslavmihok/EinfachEntspannen"
+                    target="_blank"
+                    referrerpolicy="no-referrer"
+                    >Code <i class="fa-brands fa-github"></i
+                  ></a>
+                </button>
+                <button>
+                  <a
+                    href="https://einfach-entspannen.at/"
+                    target="_blank"
+                    referrerpolicy="no-referrer"
+                    >Live Demo
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="project-item m-6 grid w-full grid-cols-2 gap-6 rounded-3xl border border-none p-6 max-xl:grid-cols-1"
+          >
+            <div class="project-item__left col-span-1">
+              <div
+                class="project-item-image__container aspect-[16/9] w-full overflow-hidden rounded-2xl border border-none"
               >
                 <img
                   src="./assets/projects/nextwipe.png"
                   alt="nextwipeweb"
-                  class="aspect-[16/9] object-cover object-left"
+                  class="aspect-[16/9] object-fill object-left"
                 />
               </div>
             </div>
@@ -334,6 +507,7 @@
                   <a
                     href="https://github.com/miroslavmihok/React-Project-13-NextWipe"
                     target="_blank"
+                    referrerpolicy="no-referrer"
                     >Code <i class="fa-brands fa-github"></i
                   ></a>
                 </button>
@@ -341,62 +515,11 @@
                   <a
                     href="https://react-project-13.netlify.app/"
                     target="_blank"
+                    referrerpolicy="no-referrer"
                     >Live Demo
                     <i class="fa-solid fa-arrow-up-right-from-square"></i
                   ></a>
                 </button>
-              </div>
-            </div>
-          </div>
-          <div
-            class="project-item m-6 grid w-full grid-cols-2 gap-6 rounded-3xl border border-none p-6 max-xl:grid-cols-1"
-          >
-            <div class="project-item__left col-span-1 text-center">
-              <h4>CodeFactory Alumni <span>(October 2023)</span></h4>
-              <p class="pb-4 text-center">
-                The CodeFactory Alumni project marks the conclusion of a
-                CodeFactory course, resulting in a comprehensive website
-                showcasing the institution's mission, alumni profiles, success
-                stories, upcoming events, and job opportunities. It successfully
-                integrates specific requirements, providing a user-friendly
-                interface to explore the diverse aspects of CodeFactory,
-                including its impact on graduates' careers.
-              </p>
-              <div class="project-item__buttons pb-4">
-                <button>Angular</button>
-                <button>Typescript</button>
-                <button>HTML</button>
-                <button>SASS</button>
-              </div>
-              <div
-                class="project-item__links flex w-full items-center justify-evenly"
-              >
-                <button>
-                  <a
-                    href="https://github.com/miroslavmihok/Group-7-FinalProject"
-                    target="_blank"
-                    >Code <i class="fa-brands fa-github"></i
-                  ></a>
-                </button>
-                <button>
-                  <a
-                    href="https://snazzy-ganache-f3acd0.netlify.app/"
-                    target="_blank"
-                    >Live Demo
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                </button>
-              </div>
-            </div>
-            <div class="project-item__right col-span-1">
-              <div
-                class="project-item-image__container h-full overflow-hidden rounded-2xl border border-none"
-              >
-                <img
-                  src="./assets/projects/alumni.png"
-                  alt="alumni web"
-                  class="aspect-[16/9] object-cover object-left"
-                />
               </div>
             </div>
           </div>
@@ -405,12 +528,12 @@
           >
             <div class="project-item__left col-span-1">
               <div
-                class="project-item-image__container h-full overflow-hidden rounded-2xl border border-none"
+                class="project-item-image__container aspect-[16/9] w-full overflow-hidden rounded-2xl border border-none"
               >
                 <img
                   src="./assets/projects/burgershop.png"
                   alt="burgershop"
-                  class="aspect-[16/9] object-cover object-left"
+                  class="aspect-[16/9] object-fill object-left"
                 />
               </div>
             </div>
@@ -441,6 +564,7 @@
                   <a
                     href="https://github.com/miroslavmihok/JS-Burger-Shop"
                     target="_blank"
+                    referrerpolicy="no-referrer"
                     >Code <i class="fa-brands fa-github"></i
                   ></a>
                 </button>
@@ -448,6 +572,7 @@
                   <a
                     href="https://peppy-cendol-de46e9.netlify.app/"
                     target="_blank"
+                    referrerpolicy="no-referrer"
                     >Live Demo
                     <i class="fa-solid fa-arrow-up-right-from-square"></i
                   ></a>
@@ -455,69 +580,18 @@
               </div>
             </div>
           </div>
-          <div
-            class="project-item m-6 grid w-full grid-cols-2 gap-6 rounded-3xl border border-none p-6 max-xl:grid-cols-1"
-          >
-            <div class="project-item__left col-span-1 text-center">
-              <h4>Italian Restaurant <span>(September 2023)</span></h4>
-              <p class="pb-4 text-center">
-                The Italian Restaurant project, part of the CodeFactory course,
-                narrates the restaurant's story, showcases the menu, and
-                empowers customers to add items dynamically to their cart. The
-                cart displays real-time updates on quantity and price with an
-                option to clear the cart.
-              </p>
-              <div class="project-item__buttons pb-4">
-                <button>Angular</button>
-                <button>Typescript</button>
-                <button>HTML</button>
-                <button>SASS</button>
-                <button>Tailwind CSS</button>
-                <button>Bootstrap</button>
-              </div>
-              <div
-                class="project-item__links flex w-full items-center justify-evenly"
-              >
-                <button>
-                  <a
-                    href="https://github.com/miroslavmihok/FE20-CR3-MiroslavMihok"
-                    target="_blank"
-                    >Code <i class="fa-brands fa-github"></i
-                  ></a>
-                </button>
-                <button>
-                  <a
-                    href="https://dancing-profiterole-8ec14d.netlify.app/"
-                    target="_blank"
-                    >Live Demo
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i
-                  ></a>
-                </button>
-              </div>
-            </div>
-            <div class="project-item__right col-span-1">
-              <div
-                class="project-item-image__container h-full overflow-hidden rounded-2xl border border-none"
-              >
-                <img
-                  src="./assets/projects/restaurant.png"
-                  alt="italian restaurant web"
-                  class="aspect-[16/9] object-cover object-left"
-                />
-              </div>
-            </div>
-          </div>
+
           <div
             class="project-item m-6 grid w-full grid-cols-2 gap-6 rounded-3xl border border-none p-6 max-xl:grid-cols-1"
           >
             <div class="project-item__left col-span-1">
               <div
-                class="project-item-image__container h-full overflow-hidden rounded-2xl border border-none"
+                class="project-item-image__container aspect-[16/9] w-full overflow-hidden rounded-2xl border border-none"
               >
                 <img
                   src="./assets/projects/tesla.png"
                   alt="burgershop"
-                  class="aspect-[16/9] object-cover object-left"
+                  class="aspect-[16/9] object-fill object-left"
                 />
               </div>
             </div>
@@ -545,6 +619,7 @@
                   <a
                     href="https://github.com/miroslavmihok/JS-Day-4-Tesla-Website/tree/master"
                     target="_blank"
+                    referrerpolicy="no-referrer"
                     >Code <i class="fa-brands fa-github"></i
                   ></a>
                 </button>
@@ -552,6 +627,7 @@
                   <a
                     href="https://stupendous-kashata-fb0ea2.netlify.app/#"
                     target="_blank"
+                    referrerpolicy="no-referrer"
                     >Live Demo
                     <i class="fa-solid fa-arrow-up-right-from-square"></i
                   ></a>
@@ -563,6 +639,7 @@
             <a
               href="https://github.com/miroslavmihok?tab=repositories"
               target="_blank"
+              referrerpolicy="no-referrer"
               >More Projects <i class="fa-brands fa-github"></i
             ></a>
           </button>
@@ -614,12 +691,16 @@
       <div class="footer__container">
         <span>&copy; Copyright Miroslav Mihok. All Rights Reserved</span>
         <div class="socials__container">
-          <a href="https://github.com/miroslavmihok" target="_blank"
+          <a
+            href="https://github.com/miroslavmihok"
+            target="_blank"
+            referrerpolicy="no-referrer"
             ><i class="fa-brands fa-github text-2xl"></i
           ></a>
           <a
             href="https://www.linkedin.com/in/miroslav-mihok-67aa80162/"
             target="_blank"
+            referrerpolicy="no-referrer"
             ><i class="fa-brands fa-linkedin ml-4 text-2xl"></i
           ></a>
         </div>
