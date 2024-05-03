@@ -638,6 +638,10 @@ video {
   display: flex;
 }
 
+.table{
+  display: table;
+}
+
 .grid{
   display: grid;
 }
@@ -646,12 +650,16 @@ video {
   display: none;
 }
 
-.aspect-\[16\/9\]{
-  aspect-ratio: 16/9;
+.aspect-\[16\/10\]{
+  aspect-ratio: 16/10;
 }
 
 .aspect-square{
   aspect-ratio: 1 / 1;
+}
+
+.aspect-\[16\/9\]{
+  aspect-ratio: 16/9;
 }
 
 .h-16{
@@ -712,12 +720,16 @@ video {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.grid-cols-4{
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .flex-col{
   flex-direction: column;
+}
+
+.items-start{
+  align-items: flex-start;
 }
 
 .items-center{
@@ -756,6 +768,18 @@ video {
   gap: 1rem;
 }
 
+.gap-3{
+  gap: 0.75rem;
+}
+
+.gap-y-2{
+  row-gap: 0.5rem;
+}
+
+.gap-y-4{
+  row-gap: 1rem;
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -766,6 +790,10 @@ video {
 
 .break-words{
   overflow-wrap: break-word;
+}
+
+.break-all{
+  word-break: break-all;
 }
 
 .rounded-2xl{
@@ -791,6 +819,11 @@ video {
 .object-cover{
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.object-fill{
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .object-left{
@@ -826,12 +859,21 @@ video {
   padding-bottom: 8rem;
 }
 
+.px-4{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .pb-4{
   padding-bottom: 1rem;
 }
 
 .pl-\[3rem\]{
   padding-left: 3rem;
+}
+
+.text-left{
+  text-align: left;
 }
 
 .text-center{
@@ -847,18 +889,16 @@ video {
   line-height: 2rem;
 }
 
-.text-sm{
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+.font-bold{
+  font-weight: 700;
 }
 
-.italic{
-  font-style: italic;
+.font-semibold{
+  font-weight: 600;
 }
 
-.text-gray-500{
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+.font-medium{
+  font-weight: 500;
 }
 
 .filter{
@@ -1563,6 +1603,10 @@ footer .footer__container i {
 
   .max-xl\:grid-cols-1{
     grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .max-xl\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .max-xl\:flex-wrap{
